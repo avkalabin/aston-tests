@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.ClickOptions.usingJavaScript;
@@ -13,6 +14,7 @@ import static io.qameta.allure.Allure.step;
 public class AstonTests extends TestBase {
 
     @Test
+    @DisplayName("Проверка элементов главного меню")
     void mainMenuElementsTest() {
         step("Открываем страницу https://astondevs.ru/", () ->
                 open("https://astondevs.ru/"));
@@ -21,13 +23,14 @@ public class AstonTests extends TestBase {
     }
 
     @Test
+    @DisplayName("В перечне технологий содержится ссылка на \"1С-Битрикс\"")
     void technologyShouldHave1CTest() {
         step("Открываем страницу https://astondevs.ru/", () -> {
             open("https://astondevs.ru/");
             $(byTagAndText("h1", "ИТ-решения для развития бизнеса")).click();
         });
 
-        step("Наводим мышь на элемент \"Технологии\"", () ->
+        step("Наводим курсор на элемент \"Технологии\"", () ->
                 $("li[tabindex = 'Технологии']").hover());
 
         step("Ссылка \"1С-Битрикс\"  должна быть видима", () ->
@@ -35,6 +38,7 @@ public class AstonTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Форма \"Свяжитесь с нами\" имеет обязательные поля")
     void connectUsShouldHaveRequiredFieldsTest() {
         step("Открываем форму \"Свяжитесь с нами\" на странице https://astondevs.ru/", () -> {
             open("https://astondevs.ru/");
@@ -58,6 +62,7 @@ public class AstonTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Адрес московоского офиса указан корректно")
     void companyAddressShouldBeCorrectTest() {
         step("Открываем форму \"Офисы\" на странице https://astondevs.ru/about-us", () -> {
             open("https://astondevs.ru/about-us");
@@ -74,6 +79,7 @@ public class AstonTests extends TestBase {
     }
 
     @Test
+    @DisplayName("В разделе \"Карьера\" указана возможность удаленной работы")
     void isItPossibleToWorkRemotelyTest() {
         step("Открываем страницу \"Карьера\" сайта https://astondevs.ru", () -> {
             open("https://astondevs.ru/career");
