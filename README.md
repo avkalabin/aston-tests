@@ -101,5 +101,5 @@ gradle clean test -Dselenoid_url="selenoid.autotests.cloud/wd/hub" -Dbrowser_siz
 В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
 
 <p align="center">
-  <img title="Video" src="media/video/Lamoda_tests.gif">
+  <img title="Video" src="media/video/aston-tests.gif">
 </p>
