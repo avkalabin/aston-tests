@@ -94,7 +94,7 @@ gradle clean test -Dselenoid_url="selenoid.autotests.cloud/wd/hub" -Dbrowser_siz
 После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
-<img title="Telegram Notifications" src="media/screen/telegram-notification.png">
+<img title="Telegram Notifications" src="media/screen/telegram-notification.PNG">
 
 ## :movie_camera: Видео с прогоном тестов
 
