@@ -13,7 +13,7 @@ public class TestBase {
     static void beforeAll() {
 
         Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url");
-        Configuration.browserSize = System.getProperty("browser_size");
+        Configuration.browserSize = "1920x1080";
         Configuration.browser = System.getProperty("browser");
         Configuration.browserVersion = System.getProperty("browser_version");
 

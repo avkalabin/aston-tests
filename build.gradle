@@ -12,6 +12,7 @@ allure {
     adapter {
         aspectjWeaver.set(true)
         frameworks {
+            apply plugin: 'groovy'
             junit5 {
                 adapterVersion.set("2.19.0")
             }

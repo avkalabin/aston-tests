@@ -1,4 +1,4 @@
-# Проект по автоматизации тестирования сайта  [ASTON](https://astondevs.ru/)
+# Проект по автоматизации тестирования сайта компании [ASTON](https://astondevs.ru/)
 
 ## :open_book: Содержание:
 
@@ -48,31 +48,7 @@
 ### :house_with_garden:	Локальный запуск тестов
 
 ```bash
-gradle clean test
-```
-
-### :earth_asia: Удаленный запуск тестов
-
-```bash
-gradle clean test
--Dbrowser=${browser}
--DbrowserVersion=${browserVersion}
--DbrowserSize=${browserSize}
--DremoteDriverUrl=https://%s:%s@${REMOTE_DRIVER_URL}/wd/hub/
-```
-## Примеры использования
-
-### Для запуска удаленных тестов необходимо заполнить remote.properties или передать значение:
-
-* browser (браузер, по умолчанию chrome)
-* browserVersion (версия браузера, по умолчанию 100.0)
-* browserSize (размер окна браузера, по умолчанию 1920x1080)
-* remoteDriverUrl (url адрес selenoid)
-* videoStorage (url адрес с видео прохождения тестов)
-
-Логин и пароль извлекаются из соответствующего файла конфигурации:
-```bash
-./resources/config/credentials.properties
+gradle clean test -Dselenoid_url="selenoid.autotests.cloud/wd/hub" -Dbrowser_size="1920х1080" -Dbrowser="chrome" -Dbrowser_version="100.0"
 ```
 ## <img width="4%" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_ui/)
 Для запуска сборки необходимо перейти в раздел <code><strong>*Собрать с параметрами*</strong></code> и нажать кнопку <code><strong>*Собрать*</strong></code>.
@@ -84,7 +60,7 @@ gradle clean test
 После выполнения сборки, в блоке <code><strong>*История сборок*</strong></code> напротив номера сборки появится
 значок *Allure Report* и *Allure TestOps* кликнув по которому, откроется страница с сформированным html-отчетом и тестовой документацией.
 
-## <img width="4%" title="Allure Report" src="media/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/015_aziyatdinov_final_ui/1/allure/)
+## <img width="4%" title="Allure Report" src="media/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/018-avkalabin-lesson15/12/allure/)
 
 <p align="center">
   <img src="media/screen/jenkins_overview.png" alt="allure-report" width="900">
@@ -94,18 +70,18 @@ gradle clean test
   <img src="media/screen/jenkins_behaviors.png" alt="allure-report_1" width="900">
 </p>
 
-## <img width="4%" title="Allure TestOPS" src="media/logo/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/18485)
+## <img width="4%" title="Allure TestOPS" src="media/logo/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/2194/dashboards)
 
 ### Основной дашборд
 
 <p align="center">
-  <img src="media/screen/dashboards.png" alt="dashboard" width="900">
+  <img src="media/screen/allure-dashboard.PNG" alt="dashboard" width="900">
 </p>
 
 ### Список тестов с результатами прогона
 
 <p align="center">
-  <img src="media/screen/allure-testops-results.png" alt="dashboard" width="900">
+  <img src="media/screen/allure-testops-results.png" alt="allure-results" width="900">
 </p>
 
 ### Тест-кейсы
@@ -118,7 +94,7 @@ gradle clean test
 После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
-<img title="Telegram Notifications" src="media/screen/notifications.png">
+<img title="Telegram Notifications" src="media/screen/telegram-notification.png">
 
 ## :movie_camera: Видео с прогоном тестов
 
