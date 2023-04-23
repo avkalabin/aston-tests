@@ -45,8 +45,6 @@
 
 ## :computer: Запуск тестов из терминала
 
-### :house_with_garden:	Локальный запуск тестов
-
 ```bash
 gradle clean test -Dselenoid_url="selenoid.autotests.cloud/wd/hub" -Dbrowser_size="1920х1080" -Dbrowser="chrome" -Dbrowser_version="100.0"
 ```
