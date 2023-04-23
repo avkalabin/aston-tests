@@ -47,7 +47,7 @@ tasks.withType(Test) {
 }
 
 
-task remote_test(type: Test) {
+tasks.register('remote_test', Test) {
     useJUnitPlatform {
         includeTags("remote")
     }
