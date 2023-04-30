@@ -19,7 +19,7 @@ public class AstonTests extends TestBase {
         step("Открываем страницу https://astondevs.ru/", () ->
                 mainPage.openMainPage());
         step("Главное меню должно содержать элементы \"Технологии Отрасли Услуги Проекты Компания Карьера\"", () ->
-                mainPage.verifyMainMenu());
+                mainPage.verifyMainMenu("Технологии Отрасли Услуги Проекты Компания Карьера"));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class AstonTests extends TestBase {
                 aboutUsPage.chooseMoscowOffice());
 
         step("Модальное окно д.б. с корректным адресом", () ->
-                aboutUsPage.verifyCorrectAddress());
+                aboutUsPage.verifyCorrectAddress("Пресненская набережная, д.6, стр. 2, БЦ «Башня Империя», 3 подъезд, 50 этаж, офис 5008"));
     }
 
     @Test

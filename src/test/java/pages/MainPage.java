@@ -23,8 +23,8 @@ public class MainPage {
         return this;
     }
 
-    public void verifyMainMenu() {
-        MAIN_MENU.shouldHave(text("Технологии Отрасли Услуги Проекты Компания Карьера"));
+    public void verifyMainMenu(String value) {
+        MAIN_MENU.shouldHave(text(value));
     }
 
     public void hoverTechnologyElement() {

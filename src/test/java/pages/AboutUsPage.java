@@ -11,7 +11,6 @@ public class AboutUsPage {
     private final SelenideElement OFFICES = $(byTagAndText("div", "Офисы")),
             MOSCOW_OFFICE = $(byTagAndText("div", "Москва")),
             SELECTED_OFFICE = $(byTagAndText("ymaps", "Москва, Россия")).parent();
-    private final String correctAddress = "Пресненская набережная, д.6, стр. 2, БЦ «Башня Империя», 3 подъезд, 50 этаж, офис 5008";
 
     public AboutUsPage openAboutUsPage() {
         open("https://astondevs.ru/about-us");
@@ -26,7 +25,7 @@ public class AboutUsPage {
         MOSCOW_OFFICE.click();
     }
 
-    public void verifyCorrectAddress() {
+    public void verifyCorrectAddress(String correctAddress) {
         SELECTED_OFFICE.shouldHave(text(correctAddress));
     }
 }
